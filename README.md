@@ -6,6 +6,8 @@ Currently, the two main features are:
 - Execute/evaluate JavaScript statements in the context of any mod. For example, to check the values of global variables in your own script.
 - Live-reload scripts while the game is running. This can be performed while in a world, and a hook is supported to notify scripts when they have been reloaded. Variables may be preserved across a reload.
 
+You can download the latest version of the mod [here](http://adf.ly/1gvvKQ).
+
 ## In-Game usage
 Chat commands are as follows:
 
