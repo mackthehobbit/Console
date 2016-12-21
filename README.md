@@ -27,14 +27,15 @@ As a side effect of a script reload, all global variables etc. are cleared from 
 For example, Console's own `onDebugReload` hook saves the global `currentScript` variable across a reload. The JavaScript equivalent is the following:
 
 ```javascript
-    function onDebugReload(oldScope) {
-        currentScript = oldScope.currentScript;
-    }
+function onDebugReload(oldScope) {
+    currentScript = oldScope.currentScript;
+}
 ```
 However, you aren't restricted to just copying over variables. You may want to call your own initialisation functions such as `newLevel` since the event for those hooks have effectively been missed.
 
 ## Example Workflow
 Console is most useful for modders who develop on a PC and deploy to a physical device. An example workflow (the same used by Console itself) is:
+
 1. Deploy and start debugging the script under development.
 2. Make changes to mod script/package on PC and deploy (to the existing location) using ADB or another tool.
 3. Execute `/reload`. The `onDebugReload` method is called in the script and variables are copied to the new state of the script.
